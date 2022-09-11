@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es6",
+    "allowJs": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "baseUrl": "src"
+  },
+  "baseUrl": "src/",
+  "include": ["./src/**/*"]
+}
