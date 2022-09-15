@@ -4,6 +4,10 @@ interface ButtonProps {
   variant: 'primary' | 'default';
 }
 
+interface ItemContainerProps {
+  completed: boolean;
+}
+
 export const Title = styled.div`
   padding: 6px 16px 12px;
   font-weight: bold;
@@ -11,8 +15,9 @@ export const Title = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   padding: 20px;
   height: 100%;
   width: 100%;
@@ -73,10 +78,10 @@ export const CardContainer = styled.div`
   border: 1px solid #ceccc3;
 `;
 
-export const ItemContainer = styled.div`
+export const ItemContainer = styled.div<ItemContainerProps>`
   display: flex;
   flex-direction: row;
-  background-color: #fff;
+  background-color: ${({ completed }) => (completed ? '#a5d1b1' : '#fff')};
   margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 3px;

@@ -11,37 +11,35 @@ interface ListItemProps {
   remove(id: string): void;
 }
 
-export const ListItem: React.FC<ListItemProps> = observer(
-  ({ item, controller, remove }) => {
-    const { id, name, description, completed } = item;
+export const ListItem: React.FC<ListItemProps> = observer(({ item, controller, remove }) => {
+  const { id, name, description, completed } = item;
 
-    const handleItemClick = () => {
-      controller.activeCard = item;
-      controller.viewState = 'card';
-    };
+  const handleItemClick = () => {
+    controller.activeCard = item;
+    controller.viewState = 'card';
+  };
 
-    const handleCross = (deletedId: string) => () => {
-      remove(deletedId);
-    };
+  const handleCross = (deletedId: string) => () => {
+    remove(deletedId);
+  };
 
-    return (
-      <ItemContainer>
-        <input
-          id={id}
-          type="checkbox"
-          checked={completed}
-          onChange={() => {
-            item.completed = !completed;
-          }}
-        />
-        <ItemData onDoubleClick={() => handleItemClick()}>
-          <ItemTitle>{name}</ItemTitle>
-          <p>{description}</p>
-        </ItemData>
-        <CrossContainer onClick={handleCross(id)}>
-          <Cross />
-        </CrossContainer>
-      </ItemContainer>
-    );
-  },
-);
+  return (
+    <ItemContainer completed={completed}>
+      <input
+        id={id}
+        type="checkbox"
+        checked={completed}
+        onChange={() => {
+          item.completed = !completed;
+        }}
+      />
+      <ItemData onDoubleClick={() => handleItemClick()}>
+        <ItemTitle>{name}</ItemTitle>
+        <p>{description}</p>
+      </ItemData>
+      <CrossContainer onClick={handleCross(id)}>
+        <Cross />
+      </CrossContainer>
+    </ItemContainer>
+  );
+});
