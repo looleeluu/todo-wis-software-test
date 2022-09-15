@@ -36,5 +36,9 @@ module.exports = {
     'object-curly-spacing': 'off',
     'implicit-arrow-linebreak': 'off',
     'lines-between-class-members': 'off',
+    'no-underscore-dangle': ['error', { allowAfterThis: true }],
+    'no-param-reassign': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
   },
 };

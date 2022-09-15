@@ -32,17 +32,6 @@ const config = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.png$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png',
-            },
-          },
-        ],
-      },
-      {
         test: /\.svg$/,
         use: 'file-loader',
       },
