@@ -1,8 +1,11 @@
 import React from 'react';
-import './App.css';
+import { MainPage } from './MainPage';
+import { Container } from './ui';
+
+import './assets/styles.css';
 
 export const App: React.FC = () => (
-  <React.StrictMode>
-    <h1>Hello, World!</h1>
-  </React.StrictMode>
+  <Container>
+    <MainPage />
+  </Container>
 );

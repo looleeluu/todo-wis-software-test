@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { RootContext, store } from './common/context';
 import { App } from './App';
 
 const container = document.getElementById('app');
@@ -9,4 +10,10 @@ if (!container) {
 }
 
 const root = createRoot(container);
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <RootContext.Provider value={store}>
+      <App />
+    </RootContext.Provider>
+  </React.StrictMode>,
+);
