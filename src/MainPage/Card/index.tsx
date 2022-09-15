@@ -43,7 +43,9 @@ export const Card: React.FC<CardProps> = observer(({ item, controller }) => {
       <Divider />
 
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button onClick={() => handleBackToList()}>Back to list</Button>
+        <Button variant="primary" onClick={() => handleBackToList()}>
+          Back to list
+        </Button>
       </div>
     </CardContainer>
   );

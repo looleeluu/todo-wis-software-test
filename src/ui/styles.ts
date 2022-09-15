@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface ButtonProps {
+  variant: 'primary' | 'default';
+}
+
 export const Title = styled.div`
   padding: 6px 16px 12px;
   font-weight: bold;
@@ -15,9 +19,9 @@ export const Container = styled.div`
   background-color: antiquewhite;
 `;
 
-export const Button = styled.button`
-  color: #fff;
-  background-color: #007bff;
+export const Button = styled.button<ButtonProps>`
+  color: ${({ variant }) => (variant === 'primary' ? '#fff' : '#000')};
+  background-color: ${({ variant }) => (variant === 'primary' ? '#007bff' : '#fff')};
   border-radius: 3px;
   border: none;
   cursor: pointer;
@@ -27,6 +31,7 @@ export const Button = styled.button`
   width: 100%;
   &:hover {
     background-color: #83b1e2;
+    color: #fff;
   }
   font-size: 16px;
 `;
@@ -79,10 +84,11 @@ export const ItemContainer = styled.div`
 `;
 
 export const ItemData = styled.div`
+  padding: 16px 20px;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  padding: 16px 20px;
+  cursor: pointer;
 `;
 
 export const ItemTitle = styled.p`
@@ -91,10 +97,10 @@ export const ItemTitle = styled.p`
 `;
 
 export const CrossContainer = styled.span`
-  cursor: pointer;
+  margin: 0;
   height: 16px;
   width: 16px;
-  margin: 0;
+  cursor: pointer;
 `;
 
 export const StatusContainer = styled.div`

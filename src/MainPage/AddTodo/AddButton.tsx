@@ -11,5 +11,9 @@ export const AddButton: React.FC<AddButtonProps> = ({ controller }) => {
     controller.addButtonState = 'form';
   };
 
-  return <Button onClick={() => handleClick()}>Add Todo</Button>;
+  return (
+    <Button variant="primary" onClick={() => handleClick()}>
+      Add Todo
+    </Button>
+  );
 };

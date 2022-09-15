@@ -20,6 +20,11 @@ export const AddForm: React.FC = () => {
     controller.addButtonState = 'button';
   };
 
+  const handleCancel = () => {
+    itemCreator.clear();
+    controller.addButtonState = 'button';
+  };
+
   return (
     <FormContainer onSubmit={() => handleSubmit()}>
       <FormItem>
@@ -43,7 +48,20 @@ export const AddForm: React.FC = () => {
           }}
         />
       </FormItem>
-      <Button type="submit">Add todo</Button>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Button variant="primary" type="submit">
+          Add todo
+        </Button>
+        <Button variant="default" onClick={() => handleCancel()}>
+          Cancel
+        </Button>
+      </div>
     </FormContainer>
   );
 };

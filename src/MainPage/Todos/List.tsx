@@ -12,6 +12,23 @@ interface ListProps {
 export const List: React.FC<ListProps> = observer(({ list }) => {
   const { controller, todos } = useStore();
 
+  if (todos.isLoading) {
+    return (
+      <StatusContainer>
+        <Title>Loading...</Title>
+      </StatusContainer>
+    );
+  }
+
+  if (todos.error) {
+    return (
+      <StatusContainer>
+        <Title>{todos.error.name}</Title>
+        <p>{todos.error.message}</p>
+      </StatusContainer>
+    );
+  }
+
   if (!list) {
     return (
       <StatusContainer>
