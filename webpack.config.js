@@ -57,6 +57,10 @@ const config = {
     modules: [path.resolve(projectRoot, 'node_modules'), 'node_modules'],
     alias: {
       process: 'process/browser',
+      '@api': path.resolve(projectRoot, 'src/api'),
+      '@common': path.resolve(projectRoot, 'src/common'),
+      '@store': path.resolve(projectRoot, 'src/store'),
+      '@ui': path.resolve(projectRoot, 'src/ui'),
     },
   },
   optimization: {

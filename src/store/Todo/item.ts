@@ -1,5 +1,5 @@
 import { observable, makeObservable, computed, runInAction } from 'mobx';
-import { TodoItem } from '../../api/types';
+import { TodoItem } from '@api/types';
 
 export class TodoItemStore implements TodoItem {
   private _id: string;

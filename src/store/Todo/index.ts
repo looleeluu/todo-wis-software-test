@@ -1,6 +1,6 @@
 import { observable, computed, runInAction, makeObservable } from 'mobx';
-import { MetaData, TodoItem } from '../../api/types';
-import { Services } from '../../api';
+import { Services } from '@api';
+import { MetaData, TodoItem } from '@api/types';
 import { Filter } from './filter';
 import { TodoItemStore } from './item';
 import { ItemCreator } from './creator';
@@ -152,9 +152,7 @@ export class TodoStore {
       if (!this._list.value) {
         throw new Error('Отсутствует список');
       }
-      await this._services.todo.update(
-        this._list.value.map((todo) => todo.item),
-      );
+      await this._services.todo.update(this._list.value.map((todo) => todo.item));
     } catch (e: unknown) {
       runInAction(() => {
         if (e instanceof Error) {

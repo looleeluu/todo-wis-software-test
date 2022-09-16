@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/lines-between-class-members */
-import { Services } from '../api';
+import { Services } from '@api';
 import { TodoStore } from './Todo';
 import { ControllerStore } from './controller';
 

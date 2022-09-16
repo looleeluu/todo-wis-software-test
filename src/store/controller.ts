@@ -1,5 +1,5 @@
-import { TodoItem } from 'api/types';
 import { computed, makeObservable, observable, runInAction } from 'mobx';
+import { TodoItem } from '@api/types';
 import { ViewState, AddButtonState } from './types';
 
 export class ControllerStore {

@@ -12,7 +12,17 @@
     "jsx": "react",
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "@api": ["api/index"],
+      "@api/*": ["api/*"],
+      "@common": ["common/index"],
+      "@common/*": ["common/*"],
+      "@store": ["store/index"],
+      "@store/*": ["store/*"],
+      "@ui": ["ui/index"],
+      "@ui/*": ["ui/*"]
+    }
   },
   "baseUrl": "src/",
   "include": ["./src/**/*"]

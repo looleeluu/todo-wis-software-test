@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { useStore } from '../../common/hooks';
-import { Button, FormContainer, FormItem, Input } from '../../ui';
+import { useStore } from '@common/hooks';
+import { Button, FormContainer, FormItem, Input } from '@ui';
 
 export const AddForm: React.FC = () => {
   const { controller, todos } = useStore();

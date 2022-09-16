@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { useStore } from '../../common/hooks';
+import { useStore } from '@common/hooks';
 import { AddButton } from './AddButton';
 import { AddForm } from './AddForm';
 

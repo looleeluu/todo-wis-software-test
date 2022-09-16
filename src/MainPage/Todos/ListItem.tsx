@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { ControllerStore } from '../../store/controller';
-import { TodoItem } from '../../api/types';
-import { ItemContainer, ItemData, CrossContainer, ItemTitle } from '../../ui';
+import { ControllerStore } from '@store/controller';
+import { TodoItem } from '@api/types';
+import { ItemContainer, ItemData, CrossContainer, ItemTitle } from '@ui';
 import { Cross } from '../../assets/Icons';
 
 interface ListItemProps {

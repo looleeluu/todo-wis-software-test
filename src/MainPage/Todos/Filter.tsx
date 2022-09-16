@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { nanoid } from 'nanoid';
-import { useStore } from '../../common/hooks';
-import { Select } from '../../ui';
+import { useStore } from '@common/hooks';
+import { Select } from '@ui';
 
 export const Filter: React.FC = observer(() => {
   const { todos } = useStore();

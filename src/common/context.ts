@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { services } from '../api';
+import { services } from '@api';
 import { RootStore } from '../store';
 
 export const RootContext = createContext<RootStore | undefined>(undefined);

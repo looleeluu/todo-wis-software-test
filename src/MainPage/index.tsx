@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { useStore } from '../common/hooks';
-import { StatusContainer, Title } from '../ui';
+import { useStore } from '@common/hooks';
+import { StatusContainer, Title } from '@ui';
 import { Todos } from './Todos';
 import { Card } from './Card';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { ControllerStore } from '../../store/controller';
-import { Button } from '../../ui';
+import { ControllerStore } from '@store/controller';
+import { Button } from '@ui';
 
 interface AddButtonProps {
   controller: ControllerStore;

@@ -1,6 +1,6 @@
 import React from 'react';
+import { Container } from '@ui';
 import { MainPage } from './MainPage';
-import { Container } from './ui';
 
 import './assets/styles.css';
 

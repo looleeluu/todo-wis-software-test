@@ -1,12 +1,6 @@
-import {
-  action,
-  computed,
-  makeObservable,
-  observable,
-  runInAction,
-} from 'mobx';
+import { action, computed, makeObservable, observable, runInAction } from 'mobx';
 import { nanoid } from 'nanoid';
-import { TodoItem } from '../../api/types';
+import { TodoItem } from '@api/types';
 
 export class ItemCreator {
   @observable private _newItem: TodoItem | null = null;
@@ -38,9 +32,7 @@ export class ItemCreator {
   set name(value: string) {
     runInAction(() => {
       if (!this._newItem) {
-        throw new Error(
-          'Элемент, который мы пытаемся отредактировать отсутствует',
-        );
+        throw new Error('Элемент, который мы пытаемся отредактировать отсутствует');
       }
       this._newItem.name = value;
     });
@@ -49,9 +41,7 @@ export class ItemCreator {
   set description(value: string) {
     runInAction(() => {
       if (!this._newItem) {
-        throw new Error(
-          'Элемент, который мы пытаемся отредактировать отсутствует',
-        );
+        throw new Error('Элемент, который мы пытаемся отредактировать отсутствует');
       }
 
       this._newItem.description = value;
